@@ -8,7 +8,7 @@ import addIcon from "../../images/agregar.png";
 
 import EditProfilePopup from "./components/popup/EditProfile/EditProfile";
 import AddCardPopup from "./components/popup/NewCard/NewCard";
-import EditAvatarPopup from "./components/popup/Avatar/EditAvatar";
+import EditAvatarPopup from "./components/popup/EditAvatar/EditAvatar";
 import ImagePopup from "./components/popup/ImagePopup/ImagePopup";
 import ConfirmDeletePopup from "./components/popup/RemoveCard/RemoveCard";
 
