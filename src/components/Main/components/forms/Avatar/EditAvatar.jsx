@@ -17,7 +17,9 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, isLoading }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        onUpdateAvatar({ avatar });
+        onUpdateAvatar({
+            avatar: avatar 
+          });
     }
 
     return (

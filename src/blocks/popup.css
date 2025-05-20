@@ -4,7 +4,7 @@
   inset: 0;
   place-content: center;
   display: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .popup__opened {
@@ -22,20 +22,21 @@
 }
 
 .popup__form-title {
-  width: 100%;
   font-family: Inter;
   font-size: 18px;
   font-weight: 900;
   line-height: 29.05px;
   text-align: left;
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  margin-top: 0px;
+  position: absolute;
+  font-size: 20px;
+  top: -40px;
+  color: white;
+  background-color: black;
 }
 
 .popup-close {
   position: absolute;
-  top: 210px;
+  top: 200px;
   right: 8px;
   width: 26px;
   height: 26px;
@@ -51,7 +52,7 @@
   width: 100%;
   height: 26px;
   font-size: 14px;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-bottom: 5px;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -114,27 +115,29 @@
 @media screen and (min-width: 768px) {
 
   .popup__form {
-    width: 340px;
-    height: 260px;
-    padding: 30px 40px;
+    width: 282px;
+    height: 259px;
   }
  
   .popup__form-title {
+    position: absolute;
     font-size: 20px;
-    margin-bottom: 5px;
-    margin-top: 0px;
+    top: -40px;
+    color: white;
+    background-color: black;
+  
   }
 
   .popup-close {
     width: 38px;
     height: 38px;
-    top: 195px;
-    right: 170px;
+    top: 200px;
+    right: 200px;
   }
 
   .popup__input {
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
   .popup__input-error {
@@ -157,24 +160,30 @@
 @media screen and (min-width: 1280px) {
   .popup__form {
     width: 430px;
-    height: 330px;
-    padding: 40px 50px;
+    height: 259px;
+   
   }
 
   .popup__form-title {
+    position: absolute;
     font-size: 24px;
-    margin-bottom: 30px;
+    top: -40px;
+    left: 5px;
+    color: white;
+    background-color: black;
   }
 
   .popup-close {
     width: 40px;
     height: 40px;
-    top: 258px;
+    top: 285px;
     right: 380px;
   }
 
   .popup__input {
     font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
   .popup__input-error {
