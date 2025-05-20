@@ -6,11 +6,11 @@ import editAvatarIcon from "../../images/edit-avatar.png";
 import editIcon from "../../images/editar.png";
 import addIcon from "../../images/agregar.png";
 
-import EditProfilePopup from "./components/forms/EditProfile/EditProfile";
-import AddCardPopup from "./components/forms/NewCard/NewCard";
-import EditAvatarPopup from "./components/forms/Avatar/EditAvatar";
-import ImagePopup from "./components/forms/ImagePopup/ImagePopup";
-import ConfirmDeletePopup from "./components/forms/RemoveCard/RemoveCard";
+import EditProfilePopup from "./components/popup/EditProfile/EditProfile";
+import AddCardPopup from "./components/popup/NewCard/NewCard";
+import EditAvatarPopup from "./components/popup/Avatar/EditAvatar";
+import ImagePopup from "./components/popup/ImagePopup/ImagePopup";
+import ConfirmDeletePopup from "./components/popup/RemoveCard/RemoveCard";
 
 import api from "../../utils/Api";
 
