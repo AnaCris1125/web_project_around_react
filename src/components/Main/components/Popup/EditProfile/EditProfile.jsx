@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
 function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
@@ -25,8 +26,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
     }
 
     return (
-        <div className={`popup ${isOpen ? "popup__opened" : ""}`}>
-            <div className="popup__container">
+        <Popup isOpen={isOpen} onClose={onClose}>
                 <button onClick={onClose}>
                     <img className="popup-close" src={close} alt="icono de cerrar" />
                 </button>
@@ -70,8 +70,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
                         {isLoading ? "Guardando..." : "Guardar"}
                     </button>
                 </form>
-            </div>
-        </div>
+            </Popup>
     );
 }
 

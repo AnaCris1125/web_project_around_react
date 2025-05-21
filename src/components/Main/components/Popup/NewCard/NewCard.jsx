@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
 function AddCardPopup({ isOpen, onClose, onAddCard, isLoading }) {
@@ -28,8 +29,7 @@ function AddCardPopup({ isOpen, onClose, onAddCard, isLoading }) {
     }
 
     return (
-        <div className={`popup ${isOpen ? "popup__opened" : ""}`}>
-            <div className="popup__container">
+        <Popup isOpen={isOpen} onClose={onClose}>
                 <button onClick={onClose}>
                     <img className="popup-close" src={close} alt="icono de cerrar" />
                 </button>
@@ -70,8 +70,7 @@ function AddCardPopup({ isOpen, onClose, onAddCard, isLoading }) {
                         {isLoading ? "Agregando..." : "Agregar"}
                     </button>
                 </form>
-            </div>
-        </div>
+            </Popup>
     );
 }
 
