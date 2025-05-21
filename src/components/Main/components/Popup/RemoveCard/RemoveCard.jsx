@@ -1,7 +1,7 @@
 import React from "react";
 import close from "../../../../../images/close.svg";
 
-function ConfirmDeletePopup({ isOpen, onClose, onConfirmDelete, isLoading }) {
+function RemoveCard({ isOpen, onClose, onConfirmDelete, isLoading }) {
     function handleSubmit(e) {
         e.preventDefault();
         onConfirmDelete();
@@ -24,4 +24,4 @@ function ConfirmDeletePopup({ isOpen, onClose, onConfirmDelete, isLoading }) {
     );
 }
 
-export default ConfirmDeletePopup;
+export default RemoveCard;

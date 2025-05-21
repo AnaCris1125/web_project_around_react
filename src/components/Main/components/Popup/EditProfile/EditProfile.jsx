@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
-function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
+function EditProfile({ isOpen, onClose, onUpdateUser, isLoading }) {
     const [name, setName] = useState("");
     const [about, setAbout] = useState("");
     const [nameError, setNameError] = useState("");
@@ -74,4 +74,4 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
     );
 }
 
-export default EditProfilePopup;
+export default EditProfile;

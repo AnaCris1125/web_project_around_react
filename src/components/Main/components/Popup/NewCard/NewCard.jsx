@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
-function AddCardPopup({ isOpen, onClose, onAddCard, isLoading }) {
+function NewCard({ isOpen, onClose, onAddCard, isLoading }) {
     const [name, setName] = useState("");
     const [link, setLink] = useState("");
     const [nameError, setNameError] = useState("");
@@ -74,4 +74,4 @@ function AddCardPopup({ isOpen, onClose, onAddCard, isLoading }) {
     );
 }
 
-export default AddCardPopup;
+export default NewCard;

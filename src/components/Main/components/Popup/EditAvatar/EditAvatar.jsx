@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
-function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, isLoading }) {
+function EditAvatar({ isOpen, onClose, onUpdateAvatar, isLoading }) {
     const [avatar, setAvatar] = useState("");
     const [avatarError, setAvatarError] = useState("");
     const [isFormValid, setIsFormValid] = useState(false);
@@ -56,4 +56,4 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, isLoading }) {
     );
 }
 
-export default EditAvatarPopup;
+export default EditAvatar;
