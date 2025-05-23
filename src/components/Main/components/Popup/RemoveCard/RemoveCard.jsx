@@ -8,7 +8,7 @@ function RemoveCard({ isOpen, onClose, onConfirmDelete, isLoading }) {
     }
 
     return (
-        <div className={`popup ${isOpen ? "popup__opened" : ""}`}>
+        <>
             <div className="popup__container">
                 <button onClick={onClose}>
                     <img className="popup-close" src={close} alt="icono de cerrar" />
@@ -20,7 +20,7 @@ function RemoveCard({ isOpen, onClose, onConfirmDelete, isLoading }) {
                     </button>
                 </form>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Card from "../Main/components/Card/Card";
+import Popup from "./components/Popup/Popup.jsx";
 import avatarPlaceholder from "../../images/avatar.png";
 import editAvatarIcon from "../../images/edit-avatar.png";
 import editIcon from "../../images/editar.png";
@@ -157,28 +158,37 @@ function Main({ cards, setCards }) {
         </ul>
       </section>
 
-      {/* Popups */}
-      <EditProfilePopup
-        isOpen={isEditProfileOpen}
-        onClose={closeAllPopups}
-        onUpdateUser={handleUpdateUser}
-        isLoading={isLoading}
-        user={currentUser}
-      />
 
-      <AddCardPopup
-        isOpen={isAddCardOpen}
-        onClose={closeAllPopups}
-        onAddCard={handleAddCard}
-        isLoading={isLoading}
-      />
+      {isEditProfileOpen && (
+        <Popup isOpen={isEditProfileOpen} onClose={closeAllPopups}>
+          <EditProfilePopup
+            user={currentUser}
+            onClose={closeAllPopups}
+            onUpdateUser={handleUpdateUser}
+            isLoading={isLoading}
+          />
+        </Popup>
+      )}
 
-      <EditAvatarPopup
-        isOpen={isEditAvatarOpen}
-        onClose={closeAllPopups}
-        onUpdateAvatar={handleUpdateAvatar}
-        isLoading={isLoading}
-      />
+      {isAddCardOpen && (
+        <Popup isOpen={isAddCardOpen} onClose={closeAllPopups}>
+          <AddCardPopup
+            onClose={closeAllPopups}
+            onAddCard={handleAddCard}
+            isLoading={isLoading}
+          />
+        </Popup>
+      )}
+
+      {isEditAvatarOpen && (
+        <Popup isOpen={isEditAvatarOpen} onClose={closeAllPopups}>
+          <EditAvatarPopup
+            onClose={closeAllPopups}
+            onUpdateAvatar={handleUpdateAvatar}
+            isLoading={isLoading}
+          />
+        </Popup>
+      )}
 
       <ImagePopup
         isOpen={isImagePopupOpen}
@@ -186,12 +196,15 @@ function Main({ cards, setCards }) {
         card={selectedCard}
       />
 
-      <ConfirmDeletePopup
-        isOpen={isConfirmDeleteOpen}
-        onClose={closeAllPopups}
-        onConfirmDelete={handleCardDelete}
-        isLoading={isLoading}
-      />
+      {isConfirmDeleteOpen && (
+        <Popup isOpen={isConfirmDeleteOpen} onClose={closeAllPopups}>
+          <ConfirmDeletePopup
+            onClose={closeAllPopups}
+            onConfirmDelete={handleCardDelete}
+            isLoading={isLoading}
+          />
+        </Popup>
+      )}
     </main>
   );
 }
