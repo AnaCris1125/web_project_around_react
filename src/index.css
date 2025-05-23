@@ -1,13 +1,13 @@
-@import './vendor/normalize.css';
-@import './vendor/fonts.css';
-@import './blocks/bigimage.css';
-@import './blocks/cards.css';
-@import './blocks/footer.css';
-@import './blocks/header.css';
-@import './blocks/page.css';
-@import './blocks/popup.css';
-@import './blocks/profile.css';
-@import './blocks/universal.css';
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts.css);
+@import url(./blocks/bigimage.css);
+@import url(./blocks/cards.css);
+@import url(./blocks/footer.css);
+@import url(./blocks/header.css);
+@import url(./blocks/page.css);
+@import url(./blocks/popup.css);
+@import url(./blocks/profile.css);
+@import url(./blocks/universal.css);
 
 
 
