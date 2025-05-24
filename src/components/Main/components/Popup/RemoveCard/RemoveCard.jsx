@@ -1,7 +1,7 @@
 import React from "react";
 import close from "../../../../../images/close.svg";
 
-function RemoveCard({ isOpen, onClose, onConfirmDelete, isLoading }) {
+function RemoveCard({ onClose, onConfirmDelete, isLoading }) {
     function handleSubmit(e) {
         e.preventDefault();
         onConfirmDelete();

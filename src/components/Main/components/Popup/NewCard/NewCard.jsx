@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Popup from "../Popup";
 import close from "../../../../../images/close.svg";
 
 function NewCard({ isOpen, onClose, onAddCard, isLoading }) {
